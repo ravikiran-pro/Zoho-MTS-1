@@ -1,0 +1,14 @@
+cflags = -Wall
+libpath = -L/home/coder/Desktop/project/configure/lib
+setpath = export LD_RUN_PATH=/home/coder/Desktop/project/configure/lib 
+unsetflags = unset LD_LIBRARY_PATH
+rule cc
+  command = g++ -c -o $out $in && $unsetflags && $setpath  
+  description = CC $out
+
+rule link
+  command = g++ $cflags -o $out $in $libpath -lcgicc -lcurl
+  description = LINk $out
+
+build output.o : cc program.cpp
+build output: link output.o

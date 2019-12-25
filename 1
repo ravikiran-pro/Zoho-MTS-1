@@ -1,0 +1,11 @@
+cflags = -Wall
+rule cc
+  command = g++ -c -o $out $in
+  description = CC $out
+
+rule link
+  command = g++ -o $out $in $cflags -L /home/coder/Desktop/project/configure/bin/curl -L /home/coder/Desktop/project/configure/bin/cgicc
+  description = LINk $out
+
+build output.o : cc program.cpp
+build output: link output.o
