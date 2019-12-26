@@ -20,7 +20,7 @@ int main()
       if(name != cgi.getElements().end()) {
 	data = name->getValue();
       }
-	conn.connection("Batman");
+	conn.connection("/search/"+data);
     }
    catch(exception& e) {   	
    }

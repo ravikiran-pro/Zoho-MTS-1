@@ -8,7 +8,7 @@ class Connect
 public:
 void connection(string data)
 {
-    string url = "https://superheroapi.com/api/106555427509424/search/";
+    string url = "https://superheroapi.com/api/106555427509424";
     CURL *curl;
     CURLcode res;
         struct curl_slist *headers=NULL; // init to NULL is important
@@ -32,7 +32,6 @@ void connection(string data)
     //working successfuly receiving type
     res=curl_easy_getinfo(curl, CURLINFO_CONTENT_TYPE,&ct);
     //cout<<ct; 
-
     /* Check for errors */
     if(res != CURLE_OK)
          curl_easy_strerror(res);
