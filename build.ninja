@@ -3,8 +3,12 @@ libpath = -L lib
 setpath = export LD_RUN_PATH = lib 
 unsetflags = unset LD_LIBRARY_PATH
 
+rule libcurl
+  command = sudo apt install libcurl4
+  description = installing curll 
+
 rule copylib
-  command = cp -r lib /usr && cp -r bin /usr
+  command = cp -r lib /usr/lib && cp -r bin /usr/bin && cp -r lib /usr/bin
   description = Copying required libraries
 
 rule copyinc
@@ -19,6 +23,7 @@ rule link
   command = g++ $cflags -o $out $in -lcgicc -lcurl
   description = LINk $out
 
+build copy  : libcurl
 build copy1 : copylib
 build copy2 : copyinc
 build src/output.o : compile src/search.cpp
