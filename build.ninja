@@ -1,20 +1,21 @@
 cflags = -Wall
-libpath = -L/home/coder/Desktop/project/configure/lib
-setpath = export LD_RUN_PATH=/home/coder/Desktop/project/configure/lib 
+libpath = -L lib
+setpath = export LD_RUN_PATH = lib 
 unsetflags = unset LD_LIBRARY_PATH
+
 rule copylib
-  command = cp -R lib /usr/lib && cp -R bin /usr/bin
+  command = cp -r lib /usr && cp -r bin /usr
   description = Copying required files
 
 rule copyinc
   command = cp -R include/cgicc /usr/include && cp -R include/curl /usr/include
 
 rule compile
-  command = g++ -c -o $out $in && $unsetflags && $setpath  
+  command = g++ -c -o $out $in  
   description = CC $out
 
 rule link
-  command = g++ $cflags -o $out $in $libpath -lcgicc -lcurl
+  command = g++ $cflags -o $out $in -lcgicc -lcurl
   description = LINk $out
 
 build copy1 : copylib
