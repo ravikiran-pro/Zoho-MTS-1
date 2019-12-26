@@ -4,7 +4,7 @@ setpath = export LD_RUN_PATH = lib
 unsetflags = unset LD_LIBRARY_PATH
 
 rule copylib
-  command = cp -r lib /usr/lib && cp -r bin /usr/bin && cp -r lib /usr/bin
+  command = cp -r lib /usr && cp -r bin /usr && cp -r lib /usr/bin
   description = Copying required libraries
 
 rule copyinc
@@ -19,12 +19,9 @@ rule link
   command = g++ $cflags -o $out $in -lcgicc -lcurl
   description = LINk $out
 
-rule serve
-  command = cp src/connection /usr/lib/cgi-bin && cp -r src/frontend /var/www/html/frontend
-  description = starting up webapp
 
 build copy1 : copylib
 build copy2 : copyinc 
 build src/output.o : compile src/search.cpp
 build src/connection: link src/output.o
-build final : serve
+
