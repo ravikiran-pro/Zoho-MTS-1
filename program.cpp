@@ -1,9 +1,9 @@
 #include <iostream>
 #include <string>
 #include <string.h>
-#include "/home/coder/Desktop/project/configure/include/curl/curl.h"
-#include "/home/coder/Desktop/project/configure/include/cgicc/Cgicc.h"
-#include "/home/coder/Desktop/project/configure/include/cgicc/HTTPHTMLHeader.h"
+#include "curl/curl.h"
+#include "cgicc/Cgicc.h"
+#include "cgicc/HTTPHTMLHeader.h"
 //#include "cgicc/HTMLClasses.h"
 //#include <json/json.h>
 using namespace std;
@@ -55,7 +55,6 @@ int main()
  
     /* Perform the request, res will get the return code */ 
     curl_easy_setopt(curl, CURLOPT_HTTPHEADER, headers);
-    cout<<headers;
     res = curl_easy_perform(curl);
     /* Check for errors */ 	
     if(res != CURLE_OK)
