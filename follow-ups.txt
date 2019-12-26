@@ -1,0 +1,139 @@
+*******************************************************************************************************
+Follow-ups towards working on this entire Assessment from day1 as been tied up toegther in the page.  *
+												      *
+*******************************************************************************************************
+______________________________________________________________________________________________
+13/11/2019	-->> Midnight(seen the assessment)	::"Resource":(My_bro)		     |													   |
+14/11/2019	-->  Sent				::"Gmail":(Ekanthan@zohocorp.com)    |
+									                     |
+15/11/2019	-->  Started    			::"No Idea":(Somehow_managed)	     |
+_____________________________________________________________________________________________|
+
+15/11/2019  		::Day1
+++++++++++
+
+-- Tried cgi not working
+-- Went to see the other oppurtunities available
+-- found out lib-curl and libhttpd with sufficient tutorials but as it is complicated.
+
+-- Also checked working with c++ and creating node modules ..its also difficult and takes time to implement
+
+-- Converting c++ to emascript was been a good idea but that was more like a ch
+cheating..
+
+-- Went back to cgi .Don't knw whether it is a good-idea.But looks time dependant
+
+-- Working succesfully
+
+
+16-12-2019		::Day2
+++++++++++
+-->Made decision to quit
+-->still didnt have mind to leave it...Started doing it for satisfication
+
+
+17-12-2019		::Day3   
+++++++++++
+--> cgi sample worked succesfully
+--> Going to add cgi headers --evening
+
+
+18-12-2019		::Day4
++++++++++++
+-- cgi headers successfully added  on 18-12-2019
+-- working
+-- Back to lib curl finally installed through sudo apt
+-- curl.h succesfully working
+-- learned to work with rest api with python requests
+-- curl.h succefull works in getting data from super heroes
+-- see try now to see the request-form
+-- implemented curl with cgi ...Also working fine
+
+
+19-12-2019		::Day5
+++++++++++++
+-- worked seperately on cgi  
+	>>>worked
+-- worked seperately on curl
+	>>>worked
+-- Errors while trying to fix together
+	>>>String url and cgi get data concentation failed
+	>>>Added successfully with alternate programming samples
+
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+========================================================================================
+Current working directory  
+link.html 	 	>>var/www/
+joining joining.cpp 	>>usr/lib/cgi-bin/
+
+Working :-
+		1.) Form action sent through submission 
+		2.) Cgi receiving data
+		3.) And manipulating it with url string 
+		4.) So curl can connect to the Superhero Api
+		5.) And value is stored in a string
+
+Further Implementation:-
+		1)Connecting cgi through js, Which makes js as frontend
+		2)Retrieving back information through http api--Thinking about ideas
+
+	Note :::::::::::::	
+		When cgi connected through javascript, 
+		My cgi will not execute.so Do a file implementation to find 
+		whether the data's are succesfullt implemented
+	Note :::::::::::::
+========================================================================================
+
+VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV
+ 
+20-12-2019  ::Day 6
++++++++++++
+Find a way to execute cgi from javascript such that javascript recieves data to the html from curl through cgi.
+
+21-12-2019 
+++++++++++
+Decided to pass values through Ajax xmlhttp request
+Success.
+
+22-12-2019
+++++++++++
+Parsing SuperHeroApi within c++ failed.
+unable to install json heades nholan,jsoncpp,json-dev nothing seems to be comaptible with my system.
+
+23-12-2019
+++++++++++
+Exploring more on parsing json.
+Can't be achieved through c++..decided to work on json parsinig with Js itself.
+Done extecting required data's from the returning htpp request.
+
+24-12-2019
+++++++++++
+Adding jquery,css and bootstrap for little ui.
+Trying to run the executable on other system.
+Shared object error.
+
+25-12-2019
+++++++++++
+Would ninja build solves my problems?
+1) Understanding ninja - No sufficient tutorials
+2) Working whole day on ninja
+Works well on my machine but not in other machines
+erorrs //*missing (runtime errors)
+.../Shared object code is missing
+.../missing dll's of libcgicc and curl
+Finally, Identifed error cause 
+
+26-12-2019
+++++++++++
+Packaging program to git v1.0
+writing frontend,backend build with setting up instructions.
+Checking with a bootable stick.
+
+
+
+
+
+
+
+
