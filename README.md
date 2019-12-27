@@ -29,7 +29,7 @@
                                             |--index.css
                                             |--index.js
 ### Build Instruction and installation
-</br><i>Note: All commands are formed withing the Zoho-mts-1 folder </i>
+</br><i>Note: All commands are Executed from Zoho-mts-1 folder </i>
 ##### The ninja build will unpack the required resource and will compile the source code search.cpp.The executable build will be created in src/connection 
 ```
 $ sudo ./ninja
