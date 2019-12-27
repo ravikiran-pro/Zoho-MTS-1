@@ -56,9 +56,11 @@ $ sudo apt update
 $ cp src/connection /usr/lib/cgi-bin
 $ cp src/frontend /var/www/html
 ```
-##### Open your webbrowser
+##### Open your webbrowser based on your current apache working directory
 ```
 http://localhost/frontend/index.html
+or
+http://localhost/html/fronend/index.html
 ```
 ##### During search the ajax will work as front-end and will connect to c++ executable in /usr/lib/cgi-bin/connection through http://localhost/cgi-bin/connection?name="" and the c++ connect to SuperHeroApi through curl.
 ##### The cgi will stand as the bridge between front and the backend and communicates information via http.
