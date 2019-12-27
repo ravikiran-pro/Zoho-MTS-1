@@ -5,6 +5,7 @@
 - Fetching  SuperHero details form <a href="https://www.superheroapi.com/">superheroapi</a> using curl c++ 
 - The frontend communicate with the backend build through common gateway interface using ajax js (client side request) and cgicc c++ on server side.
 - The data's are fetched by the backend build using curl c++ and returned through cgi.
+- The project was tested in a ubuntu 18.04 fresh bootable drive.
 
 ## Directories:Zoho-mts-1
 
@@ -22,12 +23,17 @@
              |                |--build.ninja
              |
              |--source code---
-                              |--Connect.h
-                              |--search.cpp
-                              |--Frontend ---
-                                            |--index.html
-                                            |--index.css
-                                            |--index.js
+             |                |--Connect.h
+             |                |--search.cpp
+             |                |--Frontend ---
+             |                               |--index.html
+             |                               |--index.css
+             |                               |--index.js
+             |
+             |--others--------|
+                              |--performance.md (performance timing of webpage ajax,c++ and at final)
+                              |--follow-ups.txt (Day2day Activities after starting the Assignmen)
+
 ## Build Instruction and installation
 </br><i>Note: All commands are Executed from Zoho-mts-1 folder </i>
 ##### The ninja build will unpack the required resource and will compile the source code search.cpp.The executable build will be created in src/connection 
