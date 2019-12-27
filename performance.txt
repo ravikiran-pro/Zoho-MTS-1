@@ -1,4 +1,6 @@
-		ajax	c++     ninja
+			        Final
+  Timings	ajax	c++    after all
+				changes
 		------  ----    -----
 captain america	1.44s	2.92s	2.35
 superman	760ms 	2.58s   2.74
