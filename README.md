@@ -1,8 +1,9 @@
-sudo apt-get install libcurl4
-sudo apt-get install apache2
-check whether var/www/html and /usr/lib created
-build creating output and transfering all other files to their location
+# Zoho-mts-1
+<a href="https://github.com/ravikiran-pro/Zoho-mts-1">A web app based Assessment with c++ as backend</a>
 
-sudo apt-get install build-essential vim apache2
-sudo a2enmod cgi
-sudo service apache2 restart
+### Project
+>  #####Fetching  SuperHero details form <a href="https://www.superheroapi.com/">superheroapi</a> using curl c++ 
+
+> #####The frontend communicate with the backend build through common gateway interface using ajax js (client side request) and cgicc c++ on server side.
+
+> #####The data's are fetched by the backend build using curl c++ and returned through cgi.
