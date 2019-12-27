@@ -10,16 +10,17 @@ int main()
 {
     string data;
     try {
- 	Connect conn;
+ 	Connect conn;  ///creating object of curl from header Connect.h
 	Cgicc cgi;
 
-      // Send HTTP header
+      // Sends HTTP header
       cout<<HTTPHTMLHeader();
 
       form_iterator name = cgi.getElement("name");
       if(name != cgi.getElements().end()) {
 	data = name->getValue();
       }
+        ///Getting request can be change according to the need by changing the arguments of conn.connection("/"+id); , conn.connectionetc..
 	conn.connection("/search/"+data);
     }
    catch(exception& e) {   	
