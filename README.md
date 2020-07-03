@@ -1,37 +1,76 @@
-## Welcome to GitHub Pages
+# Zoho-mts-1<br>
+<a href="https://github.com/ravikiran-pro/Zoho-mts-1">A web app based Assessment with c++ as backend</a>
+## updated - 27-12-2019 [11.20 PM]
+## Project
+- Fetching  SuperHero details form <a href="https://www.superheroapi.com/">superheroapi</a> using curl c++ 
+- The frontend communicate with the backend build through common gateway interface using ajax js (client side request) and cgicc c++ on server side.
+- The data's are fetched by the backend build using curl c++ and returned through cgi.
+- The project was tested in a ubuntu 18.04 fresh bootable drive.
 
-You can use the [editor on GitHub](https://github.com/ravikiran-pro/Zoho-MTS-1/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+## Directories:Zoho-mts-1
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+             |--Header Files--
+             |                |
+             |                |-- include
+             |                |-- lib
+             |                |-- bin
+             |                |-- share
+             |                |-- docs
+             |
+             |--Ninja file----
+             |                |
+             |                |--ninja
+             |                |--build.ninja
+             |
+             |--source code---
+             |                |--Connect.h
+             |                |--search.cpp
+             |                |--Frontend ---
+             |                               |--index.html
+             |                               |--index.css
+             |                               |--index.js
+             |
+             |--others--------|
+                              |--performance.md (performance timing of webpage ajax,c++ and at final)
+                              |--follow-ups.txt (Day2day Activities after starting the Assignmen)
 
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+## Build Instruction and installation
+</br><i>Note: All commands are Executed from Zoho-mts-1 folder </i>
+##### The ninja build will unpack the required resource and will compile the source code search.cpp.The executable build will be created in src/connection 
 ```
+$ sudo ./ninja
+```
+##### libcurl is needed for the curl to connect to the Rest api.
+```
+$ sudo apt install libcurl4
+```
+##### I have use apache web server for implementing the web app.To intiate the apache and to allow c++ compile on the server side cgi should be enabled.
+```
+$ sudo apt install apache2
+$ sudo a2enmod cgi
+$ sudo service apache2 restart
+```
+##### The frontend and backendsource code should be added to the /var/www/html &&  /usr/lib/cgi-bin respectively
+```
+$ sudo apt update
+$ cp src/connection /usr/lib/cgi-bin
+$ cp src/frontend /var/www/html
+```
+##### Open your webbrowser based on your current apache working directory
+```
+http://localhost/frontend/index.html
+or
+http://localhost/html/fronend/index.html
+```
+##### During search the ajax will work as front-end and will connect to c++ executable in /usr/lib/cgi-bin/connection through http://localhost/cgi-bin/connection?name="" and the c++ connect to SuperHeroApi through curl.
+##### The cgi will stand as the bridge between front and the backend and communicates information via http.
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+## output
+<a href="https://ibb.co/yqZNtb8"><img src="https://i.ibb.co/hV4gbtK/Screenshot-from-2019-12-27-15-03-07.png" alt="Screenshot-from-2019-12-27-15-03-07" border="0"></a>
+<a href="https://ibb.co/MS01fXp"><img src="https://i.ibb.co/r0rp3WM/Screenshot-from-2019-12-27-15-06-04.png" alt="Screenshot-from-2019-12-27-15-06-04" border="0"></a>
+<a href="https://ibb.co/tsbLNG9"><img src="https://i.ibb.co/3N0R83n/Screenshot-from-2019-12-27-15-06-09.png" alt="Screenshot-from-2019-12-27-15-06-09" border="0"></a>
 
-### Jekyll Themes
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/ravikiran-pro/Zoho-MTS-1/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
 
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+                                            
+      
